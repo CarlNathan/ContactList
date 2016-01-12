@@ -19,4 +19,12 @@
 
 -(void)listContacts;
 
+-(void)showContactDetails:(NSInteger)userIndex;
+
+-(NSArray *)find:(NSString *)searchTerm;
+
+-(Contact *)findDuplicate:(NSString *)newEmail;
+
+-(BOOL)isDuplicate:(NSString *)newEmail;
+
 @end

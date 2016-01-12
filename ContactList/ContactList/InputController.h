@@ -12,6 +12,14 @@
 
 @interface InputController : NSObject
 
+@property(nonatomic)NSMutableArray *history;
+
+-(instancetype)init;
+
 -(NSString *)inputForPrompt:(NSString *)promptString;
+
+-(void)printRecentHistory;
+
+-(NSMutableDictionary *)addPhoneNumbers;
 
 @end

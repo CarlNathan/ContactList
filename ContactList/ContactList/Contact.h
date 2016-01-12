@@ -12,5 +12,11 @@
 
 @property(nonatomic)NSString *name;
 @property(nonatomic)NSString *email;
+@property(nonatomic)NSMutableDictionary *phoneNumbers;
+@property(nonatomic)BOOL hasPhoneNumber;
+
+-(instancetype)init;
+
+
 
 @end

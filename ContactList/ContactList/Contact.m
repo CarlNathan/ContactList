@@ -10,4 +10,12 @@
 
 @implementation Contact
 
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        _hasPhoneNumber = NO;
+    }
+    return self;
+}
+
 @end
