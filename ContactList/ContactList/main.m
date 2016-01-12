@@ -20,12 +20,12 @@ int main(int argc, const char * argv[]) {
              
              NSString *userCommand = [inputController inputForPrompt:@"What would you like to do? Create new contact - type: new List all contacts - type: list Quit - type: quit"];
              
-             if ([userCommand isEqualToString:@"quit"] || [userCommand isEqualToString:@"Quit"]) {
+             if ([[userCommand lowercaseString] isEqualToString:@"quit"]) {
                  
                  NSLog(@"Thanks, see you next time!");
                  return 0;
              
-             }else if ([userCommand isEqualToString:@"new"] || [userCommand isEqualToString:@"New"]){
+             }else if ([[userCommand lowercaseString] isEqualToString:@"new"]){
                  NSString *newName = [inputController inputForPrompt:@"please enter the contacts name"];
                  NSString *newEmail = [inputController inputForPrompt:@"please enter the contacts Email"];
                  Contact *newContact = [[Contact alloc] init];
@@ -34,7 +34,7 @@ int main(int argc, const char * argv[]) {
                  [contactList addContact:newContact];
 
              
-             }else if ([userCommand isEqualToString:@"list"] || [userCommand isEqualToString:@"List"]){
+             }else if ([[userCommand lowercaseString] isEqualToString:@"list"]){
                  [contactList listContacts];
              
              }else{
